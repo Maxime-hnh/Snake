@@ -76,18 +76,18 @@ function draw() {
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   // Serpent vert (plus clair)
-  ctx.fillStyle = '#00FF00';
+  ctx.fillStyle = '#8750f7';
   for (let segment of snake) {
     ctx.fillRect(segment.x * gridSize, segment.y * gridSize, gridSize, gridSize);
   }
 
   // Pomme (carré inversé)
-  ctx.fillStyle = '#004400';
+  ctx.fillStyle = '#8750f76e';
   ctx.fillRect(food.x * gridSize, food.y * gridSize, gridSize, gridSize);
 
   // Texte score en pixel font
-  ctx.fillStyle = '#00FF00';
-  ctx.font = '16px monospace';
+  ctx.fillStyle = '#8750f7';
+  ctx.font = '12px monospace';
   ctx.fillText('Score: ' + score, 10, 20);
 }
 
