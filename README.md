@@ -83,15 +83,6 @@ https://snake-3310.netlify.app/
 
 ---
 
-## 💡 Upcoming (ideas)
-
-* ✅ High score saved in `localStorage`
-* ⏱️ Speedrun mode (time limit)
-* 👾 Increasing difficulty levels
-* 🎵 Retro sound effects / 8-bit music
-
----
-
 ## 💡 Credit & Inspiration
 
 * Visual design inspired by the Nokia 3310
