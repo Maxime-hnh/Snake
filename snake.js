@@ -8,6 +8,7 @@ const modalContainer = document.querySelector('.modal_container');
 const pauseButton = document.querySelector('.pause');
 const newButton = document.querySelector('.new');
 const logo = document.getElementById("logo");
+let directionChanged = false;
 
 let score = 0;
 let loop = null;
@@ -60,6 +61,7 @@ function eatFood(head) {
 }
 
 function gameLoop() {
+  directionChanged = false;
   const newHead = moveSnake();
 
   if (checkCollision(newHead)) {
@@ -124,10 +126,24 @@ function newGame() {
 
 
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'ArrowRight' && direction !== 'left') direction = 'right';
-  if (e.key === 'ArrowLeft' && direction !== 'right') direction = 'left';
-  if (e.key === 'ArrowUp' && direction !== 'down') direction = 'up';
-  if (e.key === 'ArrowDown' && direction !== 'up') direction = 'down';
+  if (directionChanged) return;
+
+  if (e.key === 'ArrowRight' && direction !== 'left') {
+    direction = 'right';
+    directionChanged = true;
+  }
+  if (e.key === 'ArrowLeft' && direction !== 'right') {
+    direction = 'left';
+    directionChanged = true;
+  }
+  if (e.key === 'ArrowUp' && direction !== 'down') {
+    direction = 'up';
+    directionChanged = true;
+  }
+  if (e.key === 'ArrowDown' && direction !== 'up') {
+    direction = 'down';
+    directionChanged = true;
+  }
   if (e.key === "p" || e.key === "P") !isPaused && pause();
   if (e.key === "s" || e.key === "S") isPaused && start();
 });
