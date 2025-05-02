@@ -7,6 +7,8 @@ const startButton = document.querySelector('.start');
 const modalContainer = document.querySelector('.modal_container');
 const pauseButton = document.querySelector('.pause');
 const newButton = document.querySelector('.new');
+const logo = document.getElementById("logo");
+
 let score = 0;
 let loop = null;
 let isPaused = false;
@@ -141,11 +143,15 @@ newButton.addEventListener('click', () => {
 })
 
 pauseButton.addEventListener('click', () => {
-  if(isPaused) {
+  if (isPaused) {
     start();
     pauseButton.textContent = "Pause"
   } else {
     pause();
     pauseButton.textContent = "Start"
   }
+})
+
+logo.addEventListener('click', () => {
+  window.open("https://maxime-huynh.vercel.app/fr", "_blank")
 })
