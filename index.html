@@ -5,46 +5,37 @@
   <meta charset="UTF-8" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
   <title>Snake Nokia 3310</title>
   <style>
-    body {
-      background: #111;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: monospace;
-      overflow: hidden;
-    }
 
-    h1 {
-      color: white;
-      font-family: "Sora", sans-serif;
-
-    }
-
-    div {
-      width: 100%;
-      height: 100%;
-    }
-
-    canvas {
-      image-rendering: pixelated;
-      border: 2px solid #8750f7;
-      box-shadow: 0 0 20px #8750f7;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
   </style>
 </head>
 
 <body>
-  <div>
-    <h1>Snake - Nokia 3310</h1>
-    <canvas id="game" width="400" height="400"></canvas>
+  <div id="snake">
+    <div class="title-wrap">
+      <h1>Snake - Nokia 3310</h1>
+    </div>
+    <div class="container">
+      <canvas id="game" width="400" height="400"></canvas>
+      <div class="handleGame_container">
+        <button class="pause">Pause</button>
+        <button class="new">New</button>
+      </div>
+      <p id="score">Score : 0</p>
+    </div>
+  </div>
+  <div class="modal_container active">
+
+    <div class="modal">
+      <h2>Welcome back to the 00's !</h2>
+      <button  class="start">Start Game</button>
+    </div>
   </div>
   <script src="snake.js"></script>
 </body>
